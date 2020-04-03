@@ -22,6 +22,26 @@
         }
       </style>
     </link>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAUZqbj8Pr7XBejoc_CVl4No5RaC8WNK6c",
+          authDomain: "lf-handbook.firebaseapp.com",
+          databaseURL: "https://lf-handbook.firebaseio.com",
+          projectId: "lf-handbook",
+          storageBucket: "lf-handbook.appspot.com",
+          messagingSenderId: "10708737127",
+          appId: "1:10708737127:web:dea22c868ea73164c648c2",
+          measurementId: "G-P9D7HGT2JN"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
   </head>
   <body>
 		<iframe id ="root" src="developers_handbook_lf.pdf" type="application/pdf" width="100%" height="100%" />
