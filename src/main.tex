@@ -1,0 +1,44 @@
+\documentclass[11pt, oneside]{report}
+
+\include{tex/config/globals}
+\usepackage{tex/config/style}
+\usepackage{tex/config/code}
+\addbibresource{tex/references.bib}
+
+\begin{document}
+
+	\include{tex/titlepage}
+
+	\clearpage
+
+	\thispagestyle{empty}
+	\pagenumbering{gobble}
+
+	\include{tex/copyright}
+	\include{tex/abstract}
+
+	\tableofcontents
+
+	\clearpage
+
+	\pagenumbering{arabic}
+
+	\part{Content}
+	\include{tex/chapters/readability_or_understandability}
+	\include{tex/chapters/example_math}
+	\include{tex/chapters/example_code}
+	\include{tex/chapters/example_citation}
+	\include{tex/chapters/example_table}
+
+	\pagestyle{empty}
+	\pagenumbering{roman}
+	\setcounter{page}{1}
+
+	\part{Extra}
+	\phantomsection
+	\addcontentsline{toc}{chapter}{Bibliography}
+	\printbibliography
+
+	\include{tex/appendices}
+
+\end{document}
